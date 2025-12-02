@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+    display: flex;
     width: 100vw;
     margin: auto;
     max-width: 1200px;
@@ -28,7 +29,111 @@ body {
     color: #FFF;
     text-decoration: none;
 }
-
-.logo span {
+.logo:hover a {
     color: #FE6A0F;
+}
+.logo:hover a span {
+    color: #FFF;
+}
+.logo a span {
+    color: #FE6A0F;
+}
+
+/*HEADER*/
+
+header .container {
+    display: flex;
+    align-items: center;
+    padding: 45px 0;
+    gap: 50px
+}   
+
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+header nav .leftside {
+    display: flex;
+    flex: 1;
+    gap: 60px
+}
+
+header nav li a {
+    color: #FFF;
+    text-decoration: none;
+}
+header nav li a:hover {
+    color: #FE6A0F;
+}
+
+header nav .button {
+    display: block;
+    border: 1px solid #FFF;
+    padding: 12px 25px;
+    border-radius:  5px;
+    color: #FFF;
+    text-decoration: none;
+}
+header nav .button:hover {
+    background-color: #FE6A0F;
+    border-color: #FE6A0F;
+}
+
+@media (max-width: 820px) {
+    header .container {
+        gap: 30px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header nav .leftside {
+        gap: 30px;
+    }
+}
+
+header .menu {
+    display: none;
+} 
+
+header .menu-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+header .menu-icon div {
+    display: flex;
+    height: 6px;;
+    background-color: #FFF;
+}
+header .menu-icon div:nth-child(1) {
+    background-color: #a07938;
+    border-radius: 2px 2px 0 0;
+}
+header .menu-icon div:nth-child(2) {
+    background-color: #87583e;
+    border-radius: 2px;
+}
+header .menu-icon div:nth-child(3) {
+    background-color: #a07938;
+    border-radius: 0 0 2px 2px;
+}
+@media (max-width: 820px) {
+    .container {
+        flex-direction: row;
+    }
+    header nav {
+        display: none;
+    }
+
+    header .menu {
+        display: flex;
+    }
 }
